@@ -5,12 +5,12 @@ export default function Countries({ name, iso2 }) {
   return (
     <div className='countryContainer'>
       <div className='CountryTitle'>{name}</div>
-      <img
-        src={`https://flagcdn.com/16x12/${iso2.toLowerCase()}.png`}
-        srcSet={`https://flagcdn.com/32x24/${iso2.toLowerCase()}.png 2x,
-    https://flagcdn.com/48x36/${iso2.toLowerCase()}.png 3x`}
-        width="16"
-        height="12"
+      <img className='countryImg'
+        src={`https://flagcdn.com/72x54/${iso2.toLowerCase()}.png`}
+        srcSet={`https://flagcdn.com/144x108/${iso2.toLowerCase()}.png 2x,
+    https://flagcdn.com/216x162/${iso2.toLowerCase()}.png 3x`}
+        width="72"
+        height="54"
         alt={`${name}`}
       />
               
