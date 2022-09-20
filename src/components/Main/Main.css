@@ -1,0 +1,17 @@
+.countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 20px;
+}
+
+.select {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 47.5%;
+}

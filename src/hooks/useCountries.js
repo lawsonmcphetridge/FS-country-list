@@ -16,5 +16,6 @@ export function useCountries() {
     if (type === 'all') return countries;
     return countries.filter((country) => country.continent === type);  
   };
+  
   return { filterCountries, type, setType, };
 }

@@ -3,7 +3,7 @@ import './Countries.css';
 
 export default function Countries({ name, iso2 }) {
   return (
-    <div className='CountryContainer'>
+    <div className='countryContainer'>
       <div className='CountryTitle'>{name}</div>
       <img
         src={`https://flagcdn.com/16x12/${iso2.toLowerCase()}.png`}
