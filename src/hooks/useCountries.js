@@ -4,18 +4,25 @@ import { getCountries } from '../services/country';
 export function useCountries() {
   const [countries, setCountries] = useState([]);
   const [type, setType] = useState('all');
+  const [error, setError] = useState('');
   useEffect(() => {
-    async function fetchData() {
-      const data = await getCountries();
-      setCountries(data);
-    }
+    const fetchData = async () => {
+      try {
+        const data = await getCountries();
+        setCountries(data);
+      
+        
+      } catch (e) {
+        setError(e.message);
+      }
+    };
     fetchData();
   }, []);
-    
+  
   const filterCountries = () => {
     if (type === 'all') return countries;
     return countries.filter((country) => country.continent === type);  
   };
   
-  return { filterCountries, type, setType, };
+  return { filterCountries, type, setType, error };
 }

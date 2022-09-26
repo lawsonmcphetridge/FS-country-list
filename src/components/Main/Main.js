@@ -4,7 +4,8 @@ import Countries from '../Countries/Countries';
 import './Main.css';
 
 export default function Main() {
-  const { filterCountries, type, setType } = useCountries();
+  const { filterCountries, type, setType, error } = useCountries();
+  if (error) return <h1>{error}</h1>;
   return (
       
     <div className='countries'>
